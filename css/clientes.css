@@ -1,0 +1,229 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* =============================== HERO =========================== */
+.hero-proyectos {
+    position: relative;
+    height: 100vh; /* ocupa toda la pantalla */
+    background: url("../img/Global/Clientes_A.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.hero-proyectos::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* capa oscura estática */
+    z-index: -1;
+}
+
+.hero-proyectos .overlay {
+    padding: 40px;
+    border-radius: 0px;
+    text-align: center;
+}
+
+.hero-proyectos h1 {
+    margin-bottom: 0px;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.1; 
+    color: #fff;
+}
+
+.hero-proyectos p {
+    color: #ddd;
+    margin-top: 10px;
+}
+
+/* =============================== GRILLA =========================== */
+
+.clientes__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* ahora 4 columnas */
+    gap: 3px; /* espacio entre las tarjetas */
+    padding: 60px 80px; /* margen interno arriba/abajo y costados */
+    max-width: 1400px; /* ancho máximo para no estirarse de más */
+    margin: 0 auto; /* centra la grilla */
+}
+
+.cliente {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.cliente img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.cliente:hover img {
+    transform: scale(1.05);
+    filter: brightness(60%);
+}
+
+.cliente .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    color: #fff;
+    font-size: 1rem;
+    background: rgba(0,0,0,1);
+}
+
+.cliente:hover .overlay {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .clientes__grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 40px 60px;
+    }
+}
+
+@media (max-width: 900px) {
+    .clientes__grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .clientes__grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en celular */
+        padding: 20px;
+    }
+}
+
+/* ============================= CTA CARD ============================= */
+.cta-card {
+    position: relative;
+    background: url("../img/nosotros/clientes/clientes_bloque.jpg") center/cover no-repeat;
+    border-radius: 00px;            /* bordes redondeados */
+    color: #fff;
+    max-width: 1230px;               /* ancho máximo de la card */
+    margin: 60px auto;              /* centrado con espacio arriba y abajo */
+    padding: 80px 40px 80px 100px;             /* espacio interno */
+    overflow: hidden;               /* asegura que el overlay siga el borde redondeado */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2); /* sombra ligera */
+}
+
+.cta-card__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: inherit;        /* coincide con el borde redondeado */
+}
+
+.cta-card__content {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+}
+
+.cta-card__content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.cta-card__content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.cta-card__btn {
+    display: inline-block;
+    background: #ffc107; /* color corporativo */
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 0px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-card__btn:hover {
+    background: #e0a800;
+}
+
+/* ====== Desktop normal ====== */
+.cta-card {
+    position: relative;
+    background: url("../img/nosotros/clientes/clientes_bloque.jpg") center/cover no-repeat;
+    border-radius: 0px;
+    color: #fff;
+    max-width: 1237px;
+    margin: 80px auto;
+    padding: 80px 40px 80px 100px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* ====== Overlay solo para responsive ====== */
+@media (max-width: 768px) {
+    .cta-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7); /* negro semitransparente */
+        z-index: 1;
+    }
+
+    .cta-card__content {
+        position: relative;
+        z-index: 2; /* queda encima del overlay */
+        text-align: center; /* centrado en móvil */
+        max-width: 100%;
+    }
+
+    .cta-card {
+        padding: 60px 20px; /* menos padding en móvil */
+        background-position: right center;
+    }
+
+    .cta-card__btn {
+        display: inline-block;
+        margin: 20px auto 0;
+    }
+}

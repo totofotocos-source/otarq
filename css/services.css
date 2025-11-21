@@ -1,0 +1,218 @@
+/* RESET GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #102110;
+}
+
+/* ======================================== HERO PRINCIPAL ========================================= */
+.hero-servicios {
+    position: relative;
+    height: 100vh; /* ocupa toda la pantalla */
+    background: url("../img/Global/servicios_a.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.hero-servicios::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* capa oscura estática */
+    z-index: -1;
+}
+
+.hero-servicios .overlay {
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.hero-servicios h1 {
+    margin-bottom: 0px;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.1; 
+    color: #fff;
+}
+
+.hero-servicios p {
+    color: #ddd;
+    margin-top: 10px;
+}
+
+/* ======================================== SERVICIOS ========================================= */
+
+/* Grilla debajo del hero */
+.servicios-cards {
+    position: relative; /* vuelve al flujo normal */
+    margin: 60px auto; /* separación del hero */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3px;
+    max-width: 1300px;
+    width: 90%;
+}
+
+/* Cartas */
+.servicios-card {
+    display: block;
+    border-radius: 0px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    height: 450px;
+    weight: 150px;
+    position: relative;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicios-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.servicios-card-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.servicios-card-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    text-align: left;
+}
+
+.servicios-card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.servicios-card-content p {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* ======================================== DETALLES DE SERVICIO ========================================= */
+.servicio-detalle {
+    padding: 6rem 0; /* espacio arriba y abajo */
+    background-color: #fff;
+}
+
+.servicio-detalle .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* ===== Texto ===== */
+.servicio-contenido {
+    flex: 1;
+}
+
+.servicio-contenido h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.servicio-contenido p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.servicio-contenido ul {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.servicio-contenido li {
+    margin-bottom: 0.5rem;
+}
+
+/* ===== Imagen ===== */
+.servicio-imagen {
+    flex: 1;
+    text-align: right;
+}
+
+.servicio-imagen img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* ===== Botón Cotizar ===== */
+.btn-cotizar {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #f0c300;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-cotizar:hover {
+    background-color: #d9a800;
+}
+
+/* ===== Variante invertida ===== */
+.servicio-detalle.reverse .container {
+    flex-direction: row-reverse;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .servicio-detalle .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .servicio-imagen {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .servicio-contenido ul {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .servicios-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 40px auto;
+    }
+
+    .servicios-card {
+        height: 220px;
+    }
+}
