@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTARQ | Contacto</title>
+    <meta name="description" content="¿Tienes un proyecto en mente? Escríbenos y descubre cómo podemos diseñar espacios funcionales, seguros y modernos para ti." />
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tudominio.com/contact.html" />
+    <meta property="og:title" content="OTARQ | Contáctanos" />
+    <meta property="og:description" content="¿Tienes un proyecto en mente? Escríbenos y descubre cómo podemos diseñar espacios funcionales, seguros y modernos para ti." />
+    <meta property="og:image" content="https://tudominio.com/img/global/port.jpg" />
+    
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://tudominio.com/contact.html" />
+    <meta property="twitter:title" content="OTARQ | Contáctanos" />
+    <meta property="twitter:description" content="¿Tienes un proyecto en mente? Escríbenos y descubre cómo podemos diseñar espacios funcionales, seguros y modernos para ti." />
+    <meta property="twitter:image" content="https://tudominio.com/img/global/port.jpg" />
+
+    <!-- Link -->
+    <link rel="icon" href="/img/global/icono.png" type="image/png">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+<!---------------- Logo OTARQ ------------------>
+    <a href="index.html" class="header__logo">
+        <img src="/img/global/logov.png" alt="OTARQ" />
+    </a>
+
+<!------------- Botón hamburguesa ------------->
+<input type="checkbox" id="menu" class="header__checkbox">
+<label for="menu" class="header__open-nav-button" aria-label="Abrir menú de navegación">
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
+
+<!------------- Navegación --------------------->
+        <nav class="header__nav">
+            <div class="header__nav-logo">
+                <img src="/img/global/logov.png" alt="OTARQ"/>
+            </div>
+
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="/index.html">Inicio</a></li>
+                <li class="header__nav-item"><a href="/about.html">Sobre Nosotros</a></li>
+                <li class="header__nav-item"><a href="/project.html">Proyectos</a></li>
+                <li class="header__nav-item"><a href="/services.html">Servicios</a></li>
+                <li class="header__nav-item"><a href="/clientes.html">Clientes</a></li>
+                <li class="header__nav-item"><a href="/contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+<a href="https://wa.me/51986642020" class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp">
+    <img src="/img/iconos/whatsapp.png" alt="WhatsApp">
+</a>
+<!--=====================================  HERO  ====================================-->
+<!-- Hero Proyectos -->
+<section class="hero-contact">
+    <div class="overlay">
+    <h1>CONTÁCTANOS</h1>
+    <p>No esperes más, asegura tu futuro hoy.</p>
+    </div>
+
+    <!-- ====== INFO DE CONTACTO ====== -->
+    <div class="hero-contact-info">
+    <div class="info-item">
+        <img src="img/iconos/mail.png" alt="Correo">
+        <div>
+        <p>rosoresmachaca@ot-arquitectos.com</p>
+        <p>rosoresmachaca@arquitecto-ot.com</p>
+        </div>
+    </div>
+
+    <div class="info-item">
+        <img src="img/iconos/phone.png" alt="Teléfono">
+        <div>
+        <p>(+51) 986 642 020</p>
+        <p>(+51) 980 642 950</p>
+        </div>
+    </div>
+
+    <div class="info-item">
+        <img src="img/iconos/location.png" alt="Ubicación">
+        <div>
+        <p>Belisario Suarez 426, Lima, Perú</p>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- CONTACTO / COTIZAR -->
+<section class="contacto-page-section">
+<div class="contacto-page-container">
+    
+    <!-- CONTENEDOR GENERAL: FORM + IMAGEN -->
+    <div class="contacto-content">
+
+    <!-- LADO IZQUIERDO: FORMULARIO -->
+    <div class="contacto-form">
+        <h2 class="contacto-page-title">Solicita tu cotización</h2>
+        <p class="contacto-page-subtitle">Déjanos tus datos y nos pondremos en contacto contigo.</p>
+
+        <form class="contacto-page-form" action="https://formspree.io/f/abcdxyz" method="POST">
+        <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telefono">Número de teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej: +51 999 999 999" required>
+        </div>
+
+        <div class="form-group">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="mensaje">Detalles del proyecto</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas..."></textarea>
+        </div>
+
+        <button type="submit" id="Contacto_Formulario_boton" class="btn-enviar">Enviar</button>
+        </form>
+    </div>
+
+    <!-- LADO DERECHO: IMAGEN -->
+    <div class="contacto-img">
+        <img src="/img/global/contacto_3.jpg" alt="Oficina OTARQ o proyecto arquitectónico">
+    </div>
+
+    </div> <!-- /contacto-content -->
+
+    </div> <!-- /contacto-page-container -->
+</section>
+</main>
+
+<!-- ================================= FOOTER ============================ -->
+
+<footer class="footer">
+    <div class="footer-container">
+    
+    <!-- Columna 1: Logo + redes -->
+    <div class="footer-logo">
+        <img src="/img/global/logo_footer.png" alt="OTARQ Logo footer">
+        <p>Diseñamos espacios funcionales y seguros que inspiran. Más de 10 años de experiencia al servicio de tus proyectos.</p>
+
+        <div class="footer-social">
+        <p>Síguenos en:</p>
+        <a href="https://facebook.com/profile.php?id=100077981101059" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/otarq.peru" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+        <a href="https://linkedin.com/company/otarqarquitectos" target="_blank" aria-label="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok" aria-label="Tiktok"></i></a>
+        </div>
+    </div>
+
+    <!-- Columna 2: Enlaces -->
+    <div class="footer-links">
+        <h3>Enlaces</h3>
+        <ul>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/about.html">Sobre Nosotros</a></li>
+        <li><a href="/services.html">Servicios</a></li>
+        <li><a href="/project.html">Proyectos</a></li>
+        <li><a href="/clientes.html">Clientes</a></li>
+        <li><a href="/contact.html">Contacto</a></li>
+        </ul>
+    </div>
+    <!-- Columna 3: Contacto -->
+    <div class="footer-contact">
+        <h3>Contacto</h3>
+        <p>
+            <strong>Email:</strong> rosoresmachaca@ot-arquitectos.com <br>
+            <span style="padding-left: 52px;">rosoresmachaca@arquitecto-ot.com</span>
+        </p>
+        <p>
+            <strong>Celular:</strong> (+51) 986 642 020<br>
+            <span style="padding-left: 60px;"> (+51) 980 642 950</span>
+        </p>
+        <p><strong>Dirección:</strong> Belisario Suarez 426, Lima, Perú</p>
+    </div>
+    </div>
+
+    <!-- Línea divisoria -->
+    <div class="footer-divider"></div>
+
+    <!-- Derechos -->
+    <div class="footer-bottom">
+    <p>© 2025 OTARQ. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- Tu contenido HTML aquí, incluyendo el formulario -->
+
+<script>
+document.querySelector('.contacto-page-form').addEventListener('submit', async (e) => {
+    e.preventDefault(); // Evita que recargue la página
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const url = form.action; // Usa el action del form automáticamente
+
+    const response = await fetch(url, {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+        alert("✅ ¡Gracias! Tu mensaje fue enviado correctamente.");
+        form.reset();
+    } else {
+        alert("❌ Ocurrió un error al enviar. Inténtalo otra vez.");
+    }
+});
+</script>
+</body>
+</html>

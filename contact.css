@@ -1,0 +1,223 @@
+/* RESET GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #102110;
+}
+
+
+/* ======================================== HERO PRINCIPAL ========================================= */
+.hero-contact {
+    position: relative;
+    height: 100vh; /* ocupa toda la pantalla */
+    background: url("../img/Global/Contact_A.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.hero-contact::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* capa oscura estática */
+    z-index: -1;
+}
+
+.hero-contact .overlay {
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.hero-contact h1 {
+    margin-bottom: 0px;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.1; 
+    color: #fff;
+}
+
+.hero-contact p {
+    color: #ddd;
+    margin-top: 10px;
+}
+/* ===================== INFO DE CONTACTO (Hero) ===================== */
+.hero-contact-info {
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 6.5rem;
+    color: #fff;
+    font-size: 1rem;
+    white-space: nowrap; /* evita que se parta en varias líneas */
+    position: absolute;
+}
+
+.hero-contact-info .info-item {
+    align-items: center;
+    gap: 0.8rem;
+    display: flex;
+}
+
+.hero-contact-info img {
+    height: 40px;
+    filter: brightness(0) invert(1); /* vuelve blancos los íconos */
+    width: 40px;
+    margin-left:10px;
+}
+
+.hero-contact-info p {
+    line-height: 1.3;
+    margin: 0;
+}
+/* ============= RESPONSIVE: INFO DE CONTACTO EN COLUMNA ============= */
+@media (max-width: 768px) {
+    .hero-contact-info {
+        display: none; /* Oculta completamente en móviles */
+    }
+}
+/* =================================== CONTACTO (ajustado con imagen lateral) ========== */
+.contacto-page-section {
+    padding: 150px 20px 80px 20px;
+    display: flex;
+    justify-content: center;
+    background: url("../img/Degrades/deg_5.jpg") no-repeat center center/cover;
+}
+
+.contacto-page-container {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 0px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    max-width: 1000px;
+}
+
+.contacto-content {
+    flex-wrap: wrap;
+    align-items: stretch;
+    display: flex;
+}
+
+/* FORMULARIO (IZQUIERDA) */
+.contacto-form {
+    padding: 40px;
+    color: #fff;
+    flex: 1 1 50%;
+}
+
+.contacto-page-title {
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.contacto-page-subtitle {
+    color: #ddd;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.contacto-page-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border-radius: 0px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 5px rgba(255, 183, 3, 0.6);
+    border-color: #ffb703;
+}
+
+/* Botón formulario */
+#Contacto_Formulario_boton {
+    border: none;
+    padding: 14px 20px;
+    border-radius: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+    background: #ffb703;
+    color: #000;
+}
+
+#Contacto_Formulario_boton:hover {
+    background: #e6a600;
+}
+
+/* IMAGEN (DERECHA) */
+.contacto-img {
+    flex: 1 1 50%;
+    position: relative;
+}
+
+.contacto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .contacto-content {
+    flex-direction: column;
+    }
+    .contacto-img {
+    height: 250px;
+    }
+}
+
+/* ============= RESPONSIVE: OCULTAR IMAGEN EN MÓVIL ============= */
+@media (max-width: 768px) {
+    .contacto-img {
+    display: none;
+    }
+
+  /* y hacemos que el formulario ocupe todo el ancho */
+    .contacto-form {
+    flex: 1 1 100%;
+    width: 100%;
+    }
+}
